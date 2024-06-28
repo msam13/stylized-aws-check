@@ -1,0 +1,127 @@
+body, html, #root, .App {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  z-index: 1; /* Ensure content is above the background */
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('bg4.jpg') no-repeat center center fixed;
+  background-size: cover;
+  animation: zoomBackground 30s infinite;
+  z-index: 0; /* Ensure background is behind content */
+}
+
+@keyframes zoomBackground {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.App-header {
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  max-width: 800px;
+  width: 100%;
+  margin: 20px;
+  z-index: 1; /* Ensure header is above the background */
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.dropzone {
+  border: 2px dashed #ffffff;
+  padding: 20px;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: border-color 0.3s;
+  z-index: 1; /* Ensure dropzone is above the background */
+}
+
+.dropzone:hover {
+  border-color: #bbbbbb;
+}
+
+.previews {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  z-index: 1; /* Ensure previews are above the background */
+}
+
+.preview {
+  margin: 10px;
+}
+
+.preview img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.upload-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 1; /* Ensure button is above the background */
+}
+
+.upload-button:hover {
+  background-color: #e0e0e0;
+}
+
+.status {
+  margin-top: 20px;
+  white-space: pre-line;
+  z-index: 1; /* Ensure status is above the background */
+}
