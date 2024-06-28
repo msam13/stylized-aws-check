@@ -33,6 +33,7 @@ body, html, #root, .App {
   background: url('bg4.jpg') no-repeat center center fixed;
   background-size: cover;
   animation: zoomBackground 30s infinite;
+  filter: blur(5px); /* Add blur effect */
   z-index: 0; /* Ensure background is behind content */
 }
 
@@ -51,11 +52,12 @@ body, html, #root, .App {
 .App-header {
   backdrop-filter: blur(10px);
   padding: 2rem;
-  border-radius: 10px;
-  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20px; /* Adjust border radius for more aesthetic look */
+  background: rgba(0, 0, 0, 0.3); /* Increase transparency */
   max-width: 800px;
   width: 100%;
   margin: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
   z-index: 1; /* Ensure header is above the background */
 }
 
